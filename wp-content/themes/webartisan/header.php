@@ -36,4 +36,5 @@
             <?php endforeach; ?>
         </ul>
     </nav>
+    <?php get_search_form(); ?>
 </header>

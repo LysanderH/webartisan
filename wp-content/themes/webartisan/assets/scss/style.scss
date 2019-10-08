@@ -7,20 +7,31 @@ Description: This theme is developed for WebArtisan...
 Version: 1.0
 License:
 License URI:
-Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
+Tags:
 Text Domain: webartisan
 */
+
 // Settings
 @import "settings/colors";
+@import "settings/fonts";
+
 // Functions & mixins
-@import "functions/helpers";
+@import "functions/calculation-helpers-rem-pc";
+@import "functions/screen-reader";
+@import "functions/clearfix";
+@import "functions/font-mixins";
+@import "functions/width";
+@import "functions/margin-auto";
+@import "functions/pseudo";
+
 // Generic
 @import "generic/reset";
 
-// Elements/base
+// Objets : Media Queries, Grid layout, Sticky Footer
 
 
-//Objets : Media Queries, Grid layout, Sticky Footer
 
+// Elements or base
+@import "elements/base";
 
 // Components
