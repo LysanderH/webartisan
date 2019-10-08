@@ -43,18 +43,54 @@ function dw_getMenu($location)
 
 function dw_register_post_types()
 {
-//    register_post_type('twinning', [
-//        'label' => 'Twinning',
-//        'labels' => [
-//            'singular_name' => 'twinning',
-//            'add_new_item' => 'Add a post in twinning'
-//        ],
-//        'public' => true,
-//        'description' => 'This is the section that explain the steps of the twinning process',
-//        'menu_icon' => 'dashicons-admin-post',
-//        'menu_position' => 5,
-//        'has_archive' => true,
-//    ]);
+    register_post_type('tutoriel', [
+        'label' => 'Tutoriels',
+        'labels' => [
+            'singular_name' => 'Tutoriel',
+            'add_new_item' => 'Ajouter un tutoriel'
+        ],
+        'public' => true,
+        'description' => 'Ici sont repris tous les tutoriel',
+        'menu_icon' => 'dashicons-welcome-learn-more',
+        'menu_position' => 5,
+        'has_archive' => true,
+    ]);
+    register_post_type('snippet', [
+        'label' => 'Snippets',
+        'labels' => [
+            'singular_name' => 'Snippet',
+            'add_new_item' => 'Ajouter un snippet'
+        ],
+        'public' => true,
+        'description' => 'Ici sont repris tous les articles',
+        'menu_icon' => 'dashicons-editor-code',
+        'menu_position' => 5,
+        'has_archive' => true,
+    ]);
+    register_post_type('metier-du-web', [
+        'label' => 'Métiers du web',
+        'labels' => [
+            'singular_name' => 'Métier du web',
+            'add_new_item' => 'Ajouter un métier du web'
+        ],
+        'public' => true,
+        'description' => 'Ici sont repris tous les tutoriels',
+        'menu_icon' => 'dashicons-hammer',
+        'menu_position' => 5,
+        'has_archive' => true,
+    ]);
+    register_post_type('emploi', [
+        'label' => 'Emplois',
+        'labels' => [
+            'singular_name' => 'Emploi',
+            'add_new_item' => 'Créer une nouvelle anonce d\'emploi'
+        ],
+        'public' => true,
+        'description' => 'Ici sont repris tous les annonces d\'emploi',
+        'menu_icon' => 'dashicons-megaphone',
+        'menu_position' => 5,
+        'has_archive' => true,
+    ]);
 
 }
 
