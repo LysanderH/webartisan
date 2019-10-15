@@ -8,7 +8,7 @@ Template Name: Search Page
 
 <section>
     <?php if (have_posts()) : ?>
-        <h2>Résultats de votre recherche "<?php echo $s ?>"</h2>
+        <h2>Résultats de votre recherche pour "<?php echo $s ?>"</h2>
         <?php while (have_posts()) : the_post(); ?>
             <section>
                 <h2>

@@ -4,6 +4,15 @@
  */
 add_theme_support('post-thumbnails');
 
+/*
+ * ## Excerpt
+ */
+add_post_type_support( 'tutoriel', 'excerpt' );
+add_post_type_support( 'snippet', 'excerpt' );
+add_post_type_support( 'metier-du-web', 'excerpt' );
+add_post_type_support( 'emploi', 'excerpt' );
+
+
 /* *
  * Menus
  */
@@ -54,6 +63,7 @@ function dw_register_post_types()
         'menu_icon' => 'dashicons-welcome-learn-more',
         'menu_position' => 5,
         'has_archive' => true,
+
     ]);
     register_post_type('snippet', [
         'label' => 'Snippets',
@@ -90,6 +100,25 @@ function dw_register_post_types()
         'menu_icon' => 'dashicons-megaphone',
         'menu_position' => 5,
         'has_archive' => true,
+    ]);
+    register_post_type('carousel', [
+        'label' => 'Carousels',
+        'labels' => [
+            'singular_name' => 'Carousel',
+            'add_new_item' => 'Ajouté un item au contenu du carousel'
+        ],
+        'public' => true,
+        'description' => 'Ici vous pouvez décider du contenu du carousel',
+        'menu_icon' => 'dashicons-slides',
+        'menu_position' => 5,
+        'has_archive' => true,
+        'supports' => [
+            'title' => false
+        ],
+        'capabilities' => array(
+            'create_posts' => 'do_not_allow', // false < WP 4.5, credit @Ewout
+        ),
+        'map_meta_cap' => true,
     ]);
 
 }
