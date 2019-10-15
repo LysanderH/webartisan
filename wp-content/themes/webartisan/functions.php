@@ -2,7 +2,7 @@
 /* **
  * activate wordpress components
  */
-add_theme_support('post-thumbnails');
+add_theme_support( 'post-thumbnails', ['tutoriel', 'snippet', 'metier-du-web', 'emploi']);
 
 /*
  * ## Excerpt
@@ -11,6 +11,7 @@ add_post_type_support( 'tutoriel', 'excerpt' );
 add_post_type_support( 'snippet', 'excerpt' );
 add_post_type_support( 'metier-du-web', 'excerpt' );
 add_post_type_support( 'emploi', 'excerpt' );
+//add_theme_support( 'excerpt', ['tutoriel', 'snippet', 'metier-du-web', 'emploi']);
 
 
 /* *
@@ -115,10 +116,10 @@ function dw_register_post_types()
         'supports' => [
             'title' => false
         ],
-        'capabilities' => array(
-            'create_posts' => 'do_not_allow', // false < WP 4.5, credit @Ewout
-        ),
-        'map_meta_cap' => true,
+//        'capabilities' => array(
+//            'create_posts' => 'do_not_allow', // false < WP 4.5, credit @Ewout
+//        ),
+//        'map_meta_cap' => true,
     ]);
 
 }
