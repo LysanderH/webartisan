@@ -38,8 +38,8 @@
 <header class="header">
     <h1 role="heading" aria-level="1" class="main-heading"><a href="/">Webartisan</a></h1>
     <nav class="nav" role="navigation" aria-label="Principale">
+        <h2 class="nav__link" role="heading" aria-level="2">Navigation principale</h2>
         <ul class="nav__list">
-            <h2 class="nav__link" role="heading" aria-level="2">Navigation principale</h2>
             <?php foreach (dw_getMenu('main') as $item): ?>
                 <li class="nav__item">
                     <a href="<?= $item->url; ?>" class="nav__link"><?= $item->label; ?></a>

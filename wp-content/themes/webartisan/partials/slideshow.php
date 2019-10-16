@@ -5,7 +5,7 @@
 ?>
 <?php $slides = get_posts('carousel'); ?>
 <section class="slideshow" aria-labelledby="slideshow-heading">
-    <h2 class="slidshow__heading" id="slideshow-heading sro" role="heading" aria-level="2">Slideshow</h2>
+    <h2 class="slidshow__heading sro" id="slideshow-heading" role="heading" aria-level="2">Slideshow</h2>
     <button class="slideshow__back replaced replaced--back">Précédent</button>
     <ul class="slideshow__list">
         <?php if ($slides): ?>
