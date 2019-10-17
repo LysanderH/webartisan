@@ -1,3 +1,3 @@
 <div class="code pre">
-    <?php get_sub_field('content'); ?>
+    <?= get_sub_field('paragraphe'); ?>
 </div>

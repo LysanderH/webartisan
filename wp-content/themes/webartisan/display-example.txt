@@ -1,0 +1,17 @@
+        <?php
+        $loopArticles = new WP_Query(array(
+                'post_type' => 'post',
+                'posts_per_page' => 3
+            )
+        );
+        ?>
+        <?php if ($loopArticles->have_posts()) : while ($loopArticles->have_posts()) : $loopArticles->the_post(); ?>
+            <?php var_dump(have_rows('utils')); ?>
+            <?php if (have_rows('utils')) : while (have_rows('utils')) : the_row(); ?>
+                <?php var_dump('inc/' . get_row_layout() . '.php'); ?>
+                <?php include 'inc/' . get_row_layout() . '.php'; ?>
+            <?php endwhile; endif; ?>
+        <?php endwhile; else : ?>
+            <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
+
+        <?php endif; ?>
